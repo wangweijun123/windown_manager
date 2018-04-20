@@ -4,15 +4,73 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-    <TextView
+    <EditText
+        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textColor="#00ff00"
-        android:textIsSelectable="true"
-        android:text="啊打发士大夫是分代二二"
+        android:text="原生的edittext"
+        android:clickable="true"
+        android:longClickable="true"
+        android:textSize="17sp"/>
+
+
+    <EditText
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#00ff00"
+        android:text="自定义菜单的edittext"
         android:textSize="17sp"
-        android:id="@+id/content"/>
+        android:id="@+id/custom_memu_edittext"/>
+
+
+    <EditText
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#00ff00"
+        android:text="自定义菜单的edittext只包含系统菜单--02"
+        android:textSize="17sp"
+        android:id="@+id/custom_memu_edittext2"/>
+
+
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#ff0000"
+        android:textIsSelectable="true"
+        android:text="原生的textview"
+        android:textSize="17sp"/>
+
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#ff0000"
+        android:textIsSelectable="true"
+        android:text="自定义菜单的textview"
+        android:textSize="17sp"
+        android:id="@+id/custom_memu_textview"/>
+
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#ff0000"
+        android:textIsSelectable="true"
+        android:text="只包含系统菜单的textview"
+        android:textSize="17sp"
+        android:id="@+id/custom_memu_textview2"/>
 
 </LinearLayout>

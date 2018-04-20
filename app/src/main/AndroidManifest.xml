@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".CustomTextProcessingActivity" android:label="xxx">
+        <activity android:name=".ACustomTextProcessingActivity" android:label="11">
             <intent-filter>
                 <action android:name="android.intent.action.PROCESS_TEXT"/>
                 <category android:name="android.intent.category.DEFAULT"/>
