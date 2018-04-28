@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         custom_memu_textview2 = (TextView)findViewById(R.id.custom_memu_textview2);
         initCallback();
         initCallback2();
+
+        startActivity();
     }
 
     private void initCallback() {
