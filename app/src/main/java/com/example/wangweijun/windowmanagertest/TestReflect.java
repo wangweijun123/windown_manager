@@ -105,4 +105,21 @@ public class TestReflect {
             e.printStackTrace();
         }
     }
+
+    // .java
+
+    public static void testReflectActivityInOtherApp2() {
+        try {
+            Class<?> clazz = Class.forName("android.content.pm.PackageManager");
+            Method[] arr = clazz.getMethods();
+            int size = arr.length;
+            Log.i(MainActivity.TAG, "arr size: " + size);
+            for (int i=0; i<size; i++) {
+                Log.i(MainActivity.TAG, i+" : " + arr[i]);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

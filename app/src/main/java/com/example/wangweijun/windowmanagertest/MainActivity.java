@@ -51,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
                 TestReflect.testReflectActivityThread();
                 Log.i(TAG, "#########################");
                 TestReflect.testReflectActivityInOtherApp();
+                Log.i(TAG, "+++++++++++++++++++");
+                TestReflect.testReflectActivityInOtherApp2();
             }
         });
     }
