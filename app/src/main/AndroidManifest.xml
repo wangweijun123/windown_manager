@@ -23,6 +23,8 @@
         </activity>
 
         <activity android:name=".ACustomTextProcessingActivity" android:label="11">
+            <meta-data android:name="position" android:value="tail"/>
+            <meta-data android:name="priority" android:value="10"/>
             <intent-filter>
                 <action android:name="android.intent.action.PROCESS_TEXT"/>
                 <category android:name="android.intent.category.DEFAULT"/>

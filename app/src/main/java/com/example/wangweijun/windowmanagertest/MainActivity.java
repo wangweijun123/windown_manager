@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         initCallback();
         initCallback2();
 
-        startActivity();
     }
 
     private void initCallback() {
