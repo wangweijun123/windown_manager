@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.wangweijun.windowmanagertest">
+    package="com.example.wangweijun.text_process">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <!-- 显示顶层浮窗 -->
@@ -15,16 +15,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.wangweijun.text_process.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".ACustomTextProcessingActivity" android:label="11">
+        <activity android:name="com.example.wangweijun.text_process.ACustomTextProcessingActivity" android:label="p9">
             <meta-data android:name="position" android:value="tail"/>
-            <meta-data android:name="priority" android:value="10"/>
+            <meta-data android:name="priority" android:value="9"/>
             <intent-filter>
                 <action android:name="android.intent.action.PROCESS_TEXT"/>
                 <category android:name="android.intent.category.DEFAULT"/>

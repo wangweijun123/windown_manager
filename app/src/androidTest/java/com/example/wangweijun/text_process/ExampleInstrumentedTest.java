@@ -1,4 +1,4 @@
-package com.example.wangweijun.windowmanagertest;
+package com.example.wangweijun.text_process;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
