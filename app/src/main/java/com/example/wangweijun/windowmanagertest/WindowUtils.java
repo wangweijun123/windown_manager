@@ -56,14 +56,14 @@ public class WindowUtils {
 
         final WindowManager.LayoutParams params = new WindowManager.LayoutParams();
 
+         params.type = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
         // 类型
-        params.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
+//        params.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
 
         // WindowManager.LayoutParams.TYPE_SYSTEM_ALERT
-
         // 设置flag
 
-        int flags = WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM;
+        int flags = WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL;
         // | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
         // 如果设置了WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE，弹出的View收不到Back键的事件
         params.flags = flags;
@@ -73,10 +73,10 @@ public class WindowUtils {
         // 设置 FLAG_NOT_FOCUSABLE 悬浮窗口较小时，后面的应用图标由不可长按变为可长按
         // 不设置这个flag的话，home页的划屏会有问题
 
-        params.width = LayoutParams.MATCH_PARENT;
-        params.height = LayoutParams.MATCH_PARENT;
+        params.width = LayoutParams.WRAP_CONTENT;
+        params.height = LayoutParams.WRAP_CONTENT;
 
-        params.gravity = Gravity.CENTER;
+        params.gravity = Gravity.RIGHT;
 
         mWindowManager.addView(mView, params);
 
