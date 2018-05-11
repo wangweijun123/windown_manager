@@ -1,76 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <EditText
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="#00ff00"
-        android:text="原生的edittext"
-        android:clickable="true"
-        android:longClickable="true"
-        android:textSize="17sp"/>
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:longClickable="true"
+            android:text="原生的edittext"
+            android:textColor="#00ff00"
+            android:textSize="17sp" />
 
 
-    <EditText
-        android:layout_marginTop="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="#00ff00"
-        android:text="自定义菜单的edittext"
-        android:textSize="17sp"
-        android:id="@+id/custom_memu_edittext"/>
+        <EditText
+            android:id="@+id/custom_memu_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="自定义菜单, onCreateActionMode clear"
+            android:textColor="#00ff00"
+            android:textSize="17sp" />
 
 
-    <EditText
-        android:layout_marginTop="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="#00ff00"
-        android:text="自定义菜单的edittext只包含系统菜单--02"
-        android:textSize="17sp"
-        android:id="@+id/custom_memu_edittext2"/>
+        <EditText
+            android:id="@+id/custom_memu_onPrepareActionMode_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="自定义菜单, onPrepareActionMode clear"
+            android:textColor="#00ff00"
+            android:textSize="17sp" />
 
 
-
-    <TextView
-        android:layout_marginTop="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="#ff0000"
-        android:textIsSelectable="true"
-        android:text="原生的textview"
-        android:textSize="17sp"/>
-
-
-    <TextView
-        android:layout_marginTop="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="#ff0000"
-        android:textIsSelectable="true"
-        android:text="自定义菜单的textview"
-        android:textSize="17sp"
-        android:id="@+id/custom_memu_textview"/>
+        <EditText
+            android:id="@+id/custom_memu_edittext2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="只包含系统菜单--02"
+            android:textColor="#00ff00"
+            android:textSize="17sp" />
 
 
-    <TextView
-        android:layout_marginTop="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="#ff0000"
-        android:textIsSelectable="true"
-        android:text="只包含系统菜单的textview"
-        android:textSize="17sp"
-        android:id="@+id/custom_memu_textview2"/>
+        <EditText
+            android:id="@+id/custom_memu_edittext3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="EditText自定义菜单与系统菜单"
+            android:textColor="#00ff00"
+            android:textSize="17sp" />
 
-</LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="原生的textview"
+            android:textColor="#ff0000"
+            android:textIsSelectable="true"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/custom_memu_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="自定义菜单的textview"
+            android:textColor="#ff0000"
+            android:textIsSelectable="true"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/custom_memu_textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="只包含系统菜单的textview"
+            android:textColor="#ff0000"
+            android:textIsSelectable="true"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/custom_memu_textview3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="TextView自定义菜单与系统菜单"
+            android:textColor="#ff0000"
+            android:textIsSelectable="true"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+</ScrollView>
