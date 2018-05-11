@@ -22,11 +22,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.example.wangweijun.text_process.ACustomTextProcessingActivity" android:label="p9">
-            <meta-data android:name="position" android:value="head"/>
-            <meta-data android:name="priority" android:value="9"/>
+        <activity android:name="com.example.wangweijun.text_process.ACustomTextProcessingActivity" android:label="p1">
+            <meta-data android:name="position" android:value="1"/>
+            <meta-data android:name="clearable" android:value="true"/>
+            <meta-data android:name="secret_key" android:value="n8PSojWtyyShCz+H8ugKWg=="/>
             <intent-filter>
-                <action android:name="android.intent.action.PROCESS_TEXT_ENHANCE"/>
+                <action android:name="android.intent.action.PROCESS_TEXT"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:mimeType="text/plain"/>
             </intent-filter>
