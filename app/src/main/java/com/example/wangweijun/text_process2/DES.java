@@ -1,9 +1,9 @@
-package com.example.wangweijun.text_process;
+package com.example.wangweijun.text_process2;
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
-import static com.example.wangweijun.text_process.Base64.*;
+import static com.example.wangweijun.text_process2.Base64.*;
 
 public class DES {
     private static byte[] iv = {1,2,3,4,5,6,7,8};

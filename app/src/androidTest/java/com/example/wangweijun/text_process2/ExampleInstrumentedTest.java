@@ -1,4 +1,4 @@
-package com.example.wangweijun.text_process;
+package com.example.wangweijun.text_process2;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

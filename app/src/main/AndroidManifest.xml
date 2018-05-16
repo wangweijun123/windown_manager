@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.wangweijun.text_process">
+    package="com.example.wangweijun.text_process2">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <!-- 显示顶层浮窗 -->
@@ -15,20 +15,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.wangweijun.text_process.MainActivity">
+        <activity android:name="com.example.wangweijun.text_process2.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name="com.example.wangweijun.text_process.ACustomTextProcessingActivity" android:label="p9">
-            <meta-data android:name="position" android:value="head"/>
-            <meta-data android:name="priority" android:value="9"/>
-            <meta-data android:name="clearable" android:value="true"/>
-            <meta-data android:name="secret_key" android:value="YiMt3MONVac2shu/vFqVZEUCU+KGVgXKALqL2K6MRAPLtjiNZ8joBjmBOH4h prgZFGAhLWIwL51e0xnAZ3NBJ8E17OzVlTpr/bpVt3wdvWZvr4XudMJiRAqG T+QxSzGQoC16Mk3k/avxk4QPudorLxTYX/jSvNd4"/>
+        <activity android:name="com.example.wangweijun.text_process2.ACustomTextProcessingActivity" android:label="p3">
+            <meta-data android:name="position" android:value="3"/>
+            <meta-data android:name="clearable" android:value="false"/>
+            <meta-data android:name="secret_key" android:value="ceRgWyYtfvSlJE4AAE8CqQ=="/>
             <intent-filter>
-                <action android:name="qiku.intent.action.PROCESS_TEXT_ENHANCE"/><!--     -->
+                <action android:name="android.intent.action.PROCESS_TEXT"/><!--     -->
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:mimeType="text/plain"/>
             </intent-filter>

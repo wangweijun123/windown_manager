@@ -1,4 +1,4 @@
-package com.example.wangweijun.text_process;
+package com.example.wangweijun.text_process2;
 
 import android.graphics.Rect;
 import android.os.Bundle;
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         initCallback2();
         initCallback3();
 
+        testMd5();
     }
 
     private void onCreateActionModeClear() {
@@ -228,5 +229,12 @@ public class MainActivity extends AppCompatActivity {
             custom_memu_textview3.setCustomSelectionActionModeCallback(textSelectionActionModeCallback);
             custom_memu_edittext3.setCustomSelectionActionModeCallback(textSelectionActionModeCallback);
         }
+    }
+
+    private void testMd5() {
+        String s = "com.example.text_process2_"+"com.example.wangweijun.text_process2.ACustomTextProcessingActivity"+"_qiku_process_text_enhance";
+
+        String ss = MD5Util.MD5(s);
+        System.out.println(ss);
     }
 }

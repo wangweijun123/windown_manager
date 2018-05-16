@@ -1,9 +1,8 @@
-package com.example.wangweijun.text_process;
+package com.example.wangweijun.text_process2;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Base64;
 import android.util.Log;
 import android.widget.TextView;
 
