@@ -233,8 +233,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void testMd5() {
         String s = "com.example.text_process2_"+"com.example.wangweijun.text_process2.ACustomTextProcessingActivity"+"_qiku_process_text_enhance";
+        System.out.println(MD5Util.MD5(s));
 
-        String ss = MD5Util.MD5(s);
-        System.out.println(ss);
+        String s2 = "com.example.text_process2_"+"com.example.wangweijun.text_process2.BActivity"+"_qiku_process_text_enhance";
+        System.out.println(MD5Util.MD5(s2));
+
     }
 }

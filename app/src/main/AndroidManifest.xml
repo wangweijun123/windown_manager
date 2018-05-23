@@ -22,16 +22,30 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.example.wangweijun.text_process2.ACustomTextProcessingActivity" android:label="p3">
-            <meta-data android:name="position" android:value="3"/>
+        <activity android:name="com.example.wangweijun.text_process2.ACustomTextProcessingActivity" android:label="os-search">
+            <meta-data android:name="position" android:value="1"/>
             <meta-data android:name="clearable" android:value="false"/>
+            <meta-data android:name="position_web" android:value="1"/>
             <meta-data android:name="secret_key" android:value="ceRgWyYtfvSlJE4AAE8CqQ=="/>
             <intent-filter>
-                <action android:name="android.intent.action.PROCESS_TEXT"/><!--     -->
+                <action android:name="android.intent.action.PROCESS_TEXT"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:mimeType="text/plain"/>
             </intent-filter>
         </activity>
+
+        <activity android:name="com.example.wangweijun.text_process2.BActivity" android:label="os-2">
+            <meta-data android:name="position" android:value="2"/>
+            <meta-data android:name="clearable" android:value="false"/>
+            <meta-data android:name="position_web" android:value="2"/>
+            <meta-data android:name="secret_key" android:value="y1llRU/0pqBv+I+qPRM0kg=="/>
+            <intent-filter>
+                <action android:name="android.intent.action.PROCESS_TEXT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
