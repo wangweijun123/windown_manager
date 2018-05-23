@@ -13,6 +13,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
+
 public class MainActivity extends AppCompatActivity {
     private EditText custom_memu_edittext, custom_memu_edittext2, custom_memu_edittext3, custom_memu_onPrepareActionMode_clear;
     private TextView custom_memu_textview, custom_memu_textview2, custom_memu_textview3;
@@ -239,4 +242,15 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(MD5Util.MD5(s2));
 
     }
+
+    /**
+     * debug 
+     */
+    void printStackTrace() {
+        Exception e = new Exception();
+        StringWriter sw = new StringWriter();
+        e.printStackTrace(new PrintWriter(sw));
+        Log.d("wangweijun", "show action menu stack trace : " + sw.toString());
+    }
+
 }
