@@ -30,6 +30,8 @@ public class SvgActivity extends Activity {
         Bitmap bitmap = getBitmap(getApplicationContext(), R.drawable.ic_search);
 
         handleBitmap(bitmap, 0);
+
+        // test
     }
 
     private static Bitmap getBitmap(Context context, int vectorDrawableId) {
