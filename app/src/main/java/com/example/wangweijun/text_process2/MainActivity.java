@@ -1,6 +1,12 @@
 package com.example.wangweijun.text_process2;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.Rect;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -16,7 +22,7 @@ import android.widget.Toast;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     private EditText custom_memu_edittext, custom_memu_edittext2, custom_memu_edittext3, custom_memu_onPrepareActionMode_clear;
     private TextView custom_memu_textview, custom_memu_textview2, custom_memu_textview3;
 
@@ -40,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         initCallback3();
 
         testMd5();
+
+        testhandleBitmap();
     }
 
     private void onCreateActionModeClear() {
@@ -92,22 +100,21 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-
     private void onPrepareActionModeClear() {
         ActionMode.Callback2 textSelectionActionModeCallback;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
             textSelectionActionModeCallback = new ActionMode.Callback2() {
                 @Override
                 public boolean onCreateActionMode(ActionMode actionMode, Menu menu) {// onCreateActionMode 与 onPrepareActionMode一起改
-                    Log.d("TextProcess", "window manager onCreateActionMode");
+                    Log.d("TextProcess", "window manager onCreateActionMode size:"+menu.size());
                     return true;
                 }
 
                 @Override
                 public boolean onPrepareActionMode(ActionMode actionMode, Menu menu) {
-                    Log.d("TextProcess", "window manager onPrepareActionMode");
+                    Log.d("TextProcess", "window manager onPrepareActionMode  size:"+menu.size());
                     MenuInflater menuInflater = actionMode.getMenuInflater();
+                    Log.d("TextProcess", "window manager menu clear");
                     menu.clear();
                     menuInflater.inflate(R.menu.selection_action_menu,menu);
                     return true;
@@ -235,6 +242,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void testMd5() {
+        System.out.println("BLACK :  " + Color.WHITE);
         String s = "com.example.text_process2_"+"com.example.wangweijun.text_process2.ACustomTextProcessingActivity"+"_qiku_process_text_enhance";
         System.out.println(MD5Util.MD5(s));
 
@@ -243,14 +251,37 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /**
-     * debug 
-     */
-    void printStackTrace() {
-        Exception e = new Exception();
-        StringWriter sw = new StringWriter();
-        e.printStackTrace(new PrintWriter(sw));
-        Log.d("wangweijun", "show action menu stack trace : " + sw.toString());
+    private void testhandleBitmap() {
+        Drawable drawable = getResources().getDrawable(R.mipmap.cf_ic_top_search);
+        if (drawable instanceof BitmapDrawable) {
+            Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
+//            handleBitmap(bitmap, -1);
+        }
+
     }
 
+    private Drawable handleBitmap(Bitmap myBitmap, int color) {
+        int [] allpixels = new int [myBitmap.getHeight() * myBitmap.getWidth()];
+
+        myBitmap.getPixels(allpixels, 0, myBitmap.getWidth(), 0, 0,
+                myBitmap.getWidth(), myBitmap.getHeight());
+//        Color.WHITE
+        for(int i = 0; i < allpixels.length; i++) {
+            System.out.println("pix : " + allpixels[i]);
+//            if(allpixels[i] == Color.BLACK){
+//                allpixels[i] = color;
+//            }
+        }
+
+        myBitmap.setPixels(allpixels,0,myBitmap.getWidth(),0, 0,
+                myBitmap.getWidth(),myBitmap.getHeight());
+
+        return new BitmapDrawable(myBitmap);
+
+    }
+
+
+    public void startSvgActivity(View v) {
+        startActivity(new Intent(getApplicationContext(), SvgActivity.class));
+    }
 }
