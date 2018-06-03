@@ -10,7 +10,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/white"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -22,16 +22,14 @@
             </intent-filter>
         </activity>
 
-
         <activity android:name="com.example.wangweijun.text_process2.ACustomTextProcessingActivity"
-            android:icon="@mipmap/cf_ic_top_search"> <!-- android:label="os-search"-->
-            <meta-data android:name="text_process_enhance.position" android:value="1"/>
+             android:label="智搜">
+            <meta-data android:name="text_process_enhance.position" android:value="0"/>
             <meta-data android:name="text_process_enhance.removable" android:value="false"/>
             <meta-data android:name="text_process_enhance.show_icon" android:value="true"/>
-            <meta-data android:name="text_process_enhance.change_color" android:value="true"/>
-            <meta-data android:name="text_process_enhance.icon_dark" android:value="red.jpeg"/>
-            <meta-data android:name="text_process_enhance.icon_light" android:value="white.jpeg"/>
-            <meta-data android:name="text_process_enhance.replace_web_search" android:value="false"/>
+            <meta-data android:name="text_process_enhance.icon_dark" android:value="ic_search_dark.png"/>
+            <meta-data android:name="text_process_enhance.icon_light" android:value="ic_search_light.png"/>
+            <meta-data android:name="text_process_enhance.replace_web_search" android:value="true"/>
             <meta-data android:name="text_process_enhance.secret_key" android:value="ceRgWyYtfvSlJE4AAE8CqQ=="/>
 
             <intent-filter>
@@ -43,9 +41,9 @@
 
 
 
-        <activity android:name="com.example.wangweijun.text_process2.BActivity" android:label="os2">
+        <!--<activity android:name="com.example.wangweijun.text_process2.BActivity" android:label="os2">
             <meta-data android:name="text_process_enhance.position" android:value="10"/>
-            <meta-data android:name="text_process_enhance.removable" android:value="false"/>
+            <meta-data android:name="text_process_enhance.removable" android:value="true"/>
             <meta-data android:name="text_process_enhance.show_icon" android:value="false"/>
             <meta-data android:name="text_process_enhance.secret_key" android:value="y1llRU/0pqBv+I+qPRM0kg=="/>
 
@@ -54,7 +52,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:mimeType="text/plain"/>
             </intent-filter>
-        </activity>
+        </activity>-->
 
         <!--<activity android:name="com.example.wangweijun.text_process2." android:label="分享">
             <meta-data android:name="position" android:value="2"/>

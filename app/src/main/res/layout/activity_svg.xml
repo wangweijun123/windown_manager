@@ -5,14 +5,7 @@
     android:orientation="vertical">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableRight="@drawable/ic_search"
-        android:layout_gravity="center"
-        android:textColor="#00ff00"
-        android:textSize="17sp"
-        android:id="@+id/content"/>
+
 
 
 

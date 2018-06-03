@@ -282,6 +282,9 @@ public class MainActivity extends Activity {
 
 
     public void startSvgActivity(View v) {
-        startActivity(new Intent(getApplicationContext(), SvgActivity.class));
+//        startActivity(new Intent(getApplicationContext(), SvgActivity.class));
+
+        Intent intent = new Intent("shy.luo.activity.subactivity.in.process");
+        startActivity(intent);
     }
 }
