@@ -50,12 +50,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void implitCall() {
-        Intent intent = new Intent("com.example.activity.ACTION_START");
-        intent.addCategory("xxxxxxxxxx");
-        startActivity(intent);
-    }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

@@ -32,6 +32,7 @@
                 <category android:name="xxxxxxxxxx" />
             </intent-filter>
         </activity>
+        <activity android:name=".WindowActivity"/>
     </application>
 
 </manifest>

@@ -94,7 +94,6 @@ public class WindowUtils {
             mWindowManager.removeView(mView);
             isShown = false;
         }
-
     }
 
     private static View setUpView(final Context context) {
