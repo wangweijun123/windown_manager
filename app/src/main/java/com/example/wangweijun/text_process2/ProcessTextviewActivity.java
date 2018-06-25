@@ -9,7 +9,6 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.ActionMode;
 import android.view.Menu;
@@ -20,11 +19,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.util.List;
 
-public class MainActivity extends Activity {
+public class ProcessTextviewActivity extends Activity {
     private EditText custom_memu_edittext, custom_memu_edittext2, custom_memu_edittext3, custom_memu_onPrepareActionMode_clear;
     private TextView custom_memu_textview, custom_memu_textview2, custom_memu_textview3;
 
@@ -32,7 +29,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_process_textview);
 
         custom_memu_edittext=(EditText)findViewById(R.id.custom_memu_edittext);
         custom_memu_onPrepareActionMode_clear = findViewById(R.id.custom_memu_onPrepareActionMode_clear);
@@ -74,11 +71,11 @@ public class MainActivity extends Activity {
                     //根据item的ID处理点击事件
                     switch (item.getItemId()){
                         case R.id.Informal22:
-                            Toast.makeText(MainActivity.this, "点击的是22", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProcessTextviewActivity.this, "点击的是22", Toast.LENGTH_SHORT).show();
                             actionMode.finish();//收起操作菜单
                             break;
                         case R.id.Informal33:
-                            Toast.makeText(MainActivity.this, "点击的是33", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProcessTextviewActivity.this, "点击的是33", Toast.LENGTH_SHORT).show();
                             actionMode.finish();
                             break;
                     }
@@ -127,11 +124,11 @@ public class MainActivity extends Activity {
                     //根据item的ID处理点击事件
                     switch (item.getItemId()){
                         case R.id.Informal22:
-                            Toast.makeText(MainActivity.this, "点击的是22", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProcessTextviewActivity.this, "点击的是22", Toast.LENGTH_SHORT).show();
                             actionMode.finish();//收起操作菜单
                             break;
                         case R.id.Informal33:
-                            Toast.makeText(MainActivity.this, "点击的是33", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProcessTextviewActivity.this, "点击的是33", Toast.LENGTH_SHORT).show();
                             actionMode.finish();
                             break;
                     }
@@ -215,11 +212,11 @@ public class MainActivity extends Activity {
                     //根据item的ID处理点击事件
                     switch (item.getItemId()){
                         case R.id.Informal22:
-                            Toast.makeText(MainActivity.this, "点击的是22", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProcessTextviewActivity.this, "点击的是22", Toast.LENGTH_SHORT).show();
                             actionMode.finish();//收起操作菜单
                             break;
                         case R.id.Informal33:
-                            Toast.makeText(MainActivity.this, "点击的是33", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProcessTextviewActivity.this, "点击的是33", Toast.LENGTH_SHORT).show();
                             actionMode.finish();
                             break;
                     }
