@@ -8,6 +8,7 @@ import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.ActionMode;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.util.List;
 
 public class MainActivity extends Activity {
     private EditText custom_memu_edittext, custom_memu_edittext2, custom_memu_edittext3, custom_memu_onPrepareActionMode_clear;
@@ -249,14 +251,36 @@ public class MainActivity extends Activity {
         String s2 = "com.example.text_process2_"+"com.example.wangweijun.text_process2.BActivity"+"_qiku_process_text_enhance";
         System.out.println(MD5Util.MD5(s2));
 
+        String s3 = "com.qiku.smartsearch_"+"com.qiku.search.SmartSearchActivity"+"_qiku_process_text_enhance";
+        System.out.println(MD5Util.MD5(s3));
+
+
+        int result = Settings.Global.getInt(
+                getContentResolver(), Settings.Global.DEVICE_PROVISIONED, 0);
+        android.util.Log.i("wangweijun", "result:"+result);// e4   result:1    x6501 result:0  线上 result:1
     }
 
-    private void testhandleBitmap() {
-        Drawable drawable = getResources().getDrawable(R.mipmap.cf_ic_top_search);
-        if (drawable instanceof BitmapDrawable) {
-            Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
-//            handleBitmap(bitmap, -1);
+    private void print(List<MenuItem> allMenuItems) {
+        int size = allMenuItems.size();
+        for (int i=0; i<size; i++) {
+            MenuItem menuItem = allMenuItems.get(i);
+            int id = menuItem.getItemId();
+            CharSequence title = menuItem.getTitle();
+            android.util.Log.i("wangweijun", "id:"+id+", title:"+title);
+
         }
+
+
+
+    }
+
+
+    private void testhandleBitmap() {
+//        Drawable drawable = getResources().getDrawable(R.mipmap.cf_ic_top_search);
+//        if (drawable instanceof BitmapDrawable) {
+//            Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
+////            handleBitmap(bitmap, -1);
+//        }
 
     }
 

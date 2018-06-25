@@ -8,6 +8,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 public class ACustomTextProcessingActivity extends Activity {
+
     private static final String EXTRA_REMOVABLE =
             "qiku.intent.text_process_enhance.extra.REMOVABLE";
     private static final String EXTRA_SOURCE_PACKAGE =
@@ -31,19 +32,18 @@ public class ACustomTextProcessingActivity extends Activity {
         Intent intent = getIntent();
         StringBuilder sb = new StringBuilder();
         if (intent != null) {
+            boolean removable = intent.getBooleanExtra(EXTRA_REMOVABLE, false);
             CharSequence text = intent.getCharSequenceExtra(Intent.EXTRA_PROCESS_TEXT);
             String sourcepkg = intent.getStringExtra(EXTRA_SOURCE_PACKAGE);
             String sourceActivity = intent.getStringExtra(EXTRA_SOURCE_ACTIVITY);
             String title = intent.getStringExtra(EXTRA_MENU_TITLE);
-
-
             int position = intent.getIntExtra(EXTRA_POSITION, -1);
-
             sb.append(text).append(", sourcepkg: ").append(sourcepkg)
                     .append(", sourceActivity: ").append(sourceActivity)
                     .append(", position:").append(position)
-                    .append(", title:").append(title);
-            Log.i("wang", "sb:"+sb.toString());
+                    .append(", title:").append(title).append(", removable:"+removable);
+
+            Log.i("wangweijun", "sb:"+sb.toString());
         }
         ((TextView)findViewById(R.id.content)).setText(sb.toString());
     }

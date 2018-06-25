@@ -13,6 +13,7 @@ public class MD5Util {
             byte[] md5 = md.digest(s.getBytes("utf-8"));
             return Base64.encodeToString(md5, Base64.DEFAULT);
         } catch (Exception e) {
+            e.printStackTrace();
             return null;
         }
     }

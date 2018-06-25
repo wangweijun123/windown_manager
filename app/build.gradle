@@ -17,6 +17,68 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "api"
+
+    productFlavors {
+
+        position_0 {
+            manifestPlaceholders = [position: "0", removable: "false",
+                                    show_icon: "true", replace_web_search: "true",
+                                    secret_key: "ceRgWyYtfvSlJE4AAE8CqQ=="]
+        }
+        position_1 {
+            manifestPlaceholders = [position: "1", removable: "false",
+                                    show_icon: "true", replace_web_search: "true",
+                                    secret_key: "ceRgWyYtfvSlJE4AAE8CqQ=="]
+        }
+        position_100 {
+            manifestPlaceholders = [position: "100", removable: "false",
+                                    show_icon: "true", replace_web_search: "true",
+                                    secret_key: "ceRgWyYtfvSlJE4AAE8CqQ=="]
+        }
+
+        removable_false {
+            manifestPlaceholders = [position: "0", removable: "false",
+                                    show_icon: "true", replace_web_search: "true",
+                                    secret_key: "ceRgWyYtfvSlJE4AAE8CqQ=="]
+        }
+        removable_true {
+            manifestPlaceholders = [position: "0", removable: "true",
+                                    show_icon: "true", replace_web_search: "true",
+                                    secret_key: "ceRgWyYtfvSlJE4AAE8CqQ=="]
+        }
+
+        showicon_true {
+            manifestPlaceholders = [position: "0", removable: "false",
+                                    show_icon: "true", replace_web_search: "true",
+                                    secret_key: "ceRgWyYtfvSlJE4AAE8CqQ=="]
+        }
+        showicon_false {
+            manifestPlaceholders = [position: "0", removable: "false",
+                                    show_icon: "false", replace_web_search: "true",
+                                    secret_key: "ceRgWyYtfvSlJE4AAE8CqQ=="]
+        }
+
+        replacewebsearch_true{
+            manifestPlaceholders = [position: "0", removable: "false",
+                                    show_icon: "true", replace_web_search: "true",
+                                    secret_key: "ceRgWyYtfvSlJE4AAE8CqQ=="]
+        }
+
+        replacewebsearch_false{
+            manifestPlaceholders = [position: "0", removable: "false",
+                                    show_icon: "true", replace_web_search: "false",
+                                    secret_key: "ceRgWyYtfvSlJE4AAE8CqQ=="]
+        }
+
+        secretkey_error{
+            manifestPlaceholders = [position: "0", removable: "false",
+                                    show_icon: "true", replace_web_search: "false",
+                                    secret_key: "xxxx"]
+        }
+
+    }
 }
 
 dependencies {

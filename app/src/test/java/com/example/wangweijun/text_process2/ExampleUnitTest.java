@@ -68,6 +68,11 @@ public class ExampleUnitTest {
 //        System.out.println(list);
     }
 
+    @Test
+    public void testmd5(){
+       
+    }
+
     public static ArrayList getSingle(ArrayList list) {
         ArrayList tempList = new ArrayList<>();          //1,创建新集合
         Iterator it = list.iterator();              //2,根据传入的集合(老集合)获取迭代器

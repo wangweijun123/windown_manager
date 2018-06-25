@@ -24,14 +24,14 @@
 
         <activity android:name="com.example.wangweijun.text_process2.ACustomTextProcessingActivity"
              android:label="智搜">
-            <meta-data android:name="text_process_enhance.position" android:value="0"/>
-            <meta-data android:name="text_process_enhance.removable" android:value="false"/>
-            <meta-data android:name="text_process_enhance.show_icon" android:value="true"/>
+            <meta-data android:name="text_process_enhance.position" android:value="${position}"/>
+            <meta-data android:name="text_process_enhance.removable" android:value="${removable}"/>
+            <meta-data android:name="text_process_enhance.show_icon" android:value="${show_icon}"/>
             <meta-data android:name="text_process_enhance.icon_dark" android:value="ic_search_dark.png"/>
             <meta-data android:name="text_process_enhance.icon_light" android:value="ic_search_light.png"/>
-            <meta-data android:name="text_process_enhance.replace_web_search" android:value="true"/>
-            <meta-data android:name="text_process_enhance.secret_key" android:value="ceRgWyYtfvSlJE4AAE8CqQ=="/>
-
+            <meta-data android:name="text_process_enhance.replace_web_search" android:value="${replace_web_search}"/>
+            <meta-data android:name="text_process_enhance.secret_key" android:value="${secret_key}"/>
+            <!--  ceRgWyYtfvSlJE4AAE8CqQ==  -->
             <intent-filter>
                 <action android:name="android.intent.action.PROCESS_TEXT"/>
                 <category android:name="android.intent.category.DEFAULT"/>
