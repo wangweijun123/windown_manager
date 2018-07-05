@@ -1,6 +1,7 @@
 package com.example.wangweijun.windowmanagertest;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
@@ -53,5 +54,22 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
     }
+
+    public static void requestAlertWindowPermission(Context context) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (!Settings.canDrawOverlays(context)) {
+                Intent openIntent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION);
+                String path = "package:" + context.getPackageName();
+                openIntent.setData(Uri.parse(path));
+                openIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(openIntent);
+            }
+        }
+    }
+
+
+
+
 }
